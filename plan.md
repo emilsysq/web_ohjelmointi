@@ -14,7 +14,26 @@
 - Lähikylän asiakkaat 
 
 ## 3. Sisältösuunnitelma
-- 
+
+### Tuotteet (listing.html)
+- Tarkoitus: Kävijä näkee mitä tilapuodissa myydään ja mitä sesongissa löytyy 
+- Sisältö: Sesongin tuotteet sivun ylhäällä ja sen alla olisi koko valikoima 
+- Seuraava askel: Kävijä kysyy tuotteen saatavuudesta (linkki yhteystiedot sivulle)
+
+### Etusivu (index.html)
+- Tarkoitus: Etusivu tilapuodista, helppo navigointi muille sivuille ja aukioloajat
+- Sisältö: Aukioloajat, Mitä on sesongissa, helppo navigointi muille sivuille ja kerrontaa tilapuodista
+- Seuraava askel: Kävijä saa yleiskuvan tilasta ja etenee seuraavalle sivulle, tarvitsemansa mukaan
+
+### Meistä (about.html)
+- Tarkoitus: Tietoa meistä, mitä myymme ja miten meidät löytää
+- Sisältö: Missä olemme, mitä myymme (omia perunoita, vihanneksia, kananmunia ja marjoja sekä muutamia naapuritilojen tuotteita), 
+- Seuraava askel: Kävijä saa tiedon miten tilalle löytää tai mitä myymme.
+
+### Ota yhteyttä (contact.html)
+- Tarkoitus: Selkeä sivu yhteyttä ottamista varten
+- Sisältö: Yhteydenottolomake, muut yhteystiedot, sekä osoite
+- Seuraava askel: Kävijä saa yhteydenottoa varten tarvitsemat tiedot
 
 ## 4. Kolme oikeaa sivustoa
 - Urpolan Tilapuoti:

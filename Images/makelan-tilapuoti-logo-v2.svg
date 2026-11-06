@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 516 180" role="img" aria-labelledby="logo2-title logo2-desc">
+  <title id="logo2-title">Mäkelän Tilapuoti, Ilmajoki</title>
+  <desc id="logo2-desc">Pyöreä merkki, jossa vaalea aitta nousevan korallinpunaisen auringon edessä ja peltovaot, sekä teksti Mäkelän Tilapuoti, Ilmajoki.</desc>
+
+  <defs>
+    <clipPath id="merkki-sisa">
+      <circle cx="90" cy="90" r="70"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===== Merkki ===== -->
+  <circle cx="90" cy="90" r="80" fill="#1b2a4a"/>
+  <g clip-path="url(#merkki-sisa)">
+    <!-- Nouseva aurinko -->
+    <circle cx="90" cy="80" r="36" fill="#e0583b"/>
+    <!-- Pelto -->
+    <rect x="0" y="108" width="180" height="80" fill="#1b2a4a"/>
+    <g fill="none" stroke="#f4f6fb" stroke-width="3" stroke-linecap="round" opacity="0.85">
+      <path d="M20 122 Q90 112 160 122"/>
+      <path d="M26 136 Q90 124 154 136"/>
+      <path d="M38 150 Q90 136 142 150"/>
+    </g>
+    <!-- Aitta -->
+    <path d="M62 86 L90 62 L118 86 L114 86 L114 108 L66 108 L66 86 Z" fill="#f4f6fb"/>
+    <path d="M82 108 L82 94 Q90 86 98 94 L98 108 Z" fill="#1b2a4a"/>
+    <rect x="86" y="74" width="8" height="8" rx="1" fill="#1b2a4a"/>
+  </g>
+  <circle cx="90" cy="90" r="74" fill="none" stroke="#f4f6fb" stroke-width="2"/>
+
+  <!-- ===== Tekstit ===== -->
+  <text x="200" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="bold" fill="#1b2a4a">Mäkelän</text>
+  <rect x="202" y="108" width="282" height="4" rx="2" fill="#e0583b"/>
+  <text x="202" y="142" textLength="282" lengthAdjust="spacing" font-family="Verdana, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#1b2a4a"><tspan font-weight="bold">TILAPUOTI</tspan><tspan dx="8" fill="#e0583b" font-weight="bold">•</tspan><tspan dx="12">ILMAJOKI</tspan></text>
+</svg>
