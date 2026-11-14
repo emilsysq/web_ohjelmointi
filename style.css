@@ -5,6 +5,7 @@
     --space: 1rem;
     --font-text: system-ui, sans-serif;
 }
+
 body {
     background: var(--bg);
     color: var(--text);
@@ -14,4 +15,20 @@ body {
     line-height: 1.5;
     max-width: 65ch;
     margin: 0 auto;
+}
+
+img {max-width: 100%; height: auto;}
+
+a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration-thickness: 3px;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 2px;
 }
