@@ -1,0 +1,17 @@
+:root {
+    --text: #1b2a4a;
+    --bg: #f4f6fb;
+    --accent: #e0583b;
+    --space: 1rem;
+    --font-text: system-ui, sans-serif;
+}
+body {
+    background: var(--bg);
+    color: var(--text);
+    padding: var(--space);
+    font-family: var(--font-text);
+    font-size: 1.125rem;
+    line-height: 1.5;
+    max-width: 65ch;
+    margin: 0 auto;
+}
