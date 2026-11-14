@@ -10,3 +10,7 @@
 - Q: Ohita study mode. Tehdään asiakkaalle logo toimeksiannon perusteella, instructions kansiosta. Ota referenssejä muilta tilapuodeilta
     - A: Haen ensin referenssejä tilapuotien ja maatilojen logoista, ja suunnittelen sitten uuden version Satama-väreillä
 - Ensimmäinen logo oli viallinen. Pyysin hiomaan paria pientä asiaa ja toinen logo tuli hyvänä ilman virheitä
+
+# E2
+-Q: Koko viikko kipeänä, kertaa mitä viikon aikana on tehty luennoilla.
+
