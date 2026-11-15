@@ -4,6 +4,8 @@
     --accent: #e0583b;
     --space: 1rem;
     --font-text: system-ui, sans-serif;
+    --logo-bg: #f4f6fb;
+    color-scheme: light dark;
 }
 
 body {
@@ -24,6 +26,12 @@ body {
 
 img {max-width: 100%; height: auto;}
 
+
+header img {
+    background: var(--logo-bg);
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+}
 
 a {
     color: var(--text);
@@ -57,4 +65,11 @@ header {border-bottom: 4px solid var(--accent);}
 
 h1 {
     margin-top: var(--space);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #101a2f;
+        --text: #f4f6fb;
+    }
 }
