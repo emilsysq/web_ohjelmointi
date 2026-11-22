@@ -101,6 +101,56 @@ button[aria-pressed="true"] {
     display: none !important;
 }
 
+form div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 30rem;
+    font: inherit;
+    padding: 0.75rem;
+    background: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 0.5rem;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 3px;
+}
+
+[aria-invalid="true"] {
+    border-width: 4px;
+}
+
+.error {
+    margin: 0.5rem 0 0;
+    padding-left: 0.75rem;
+    border-left: 6px solid var(--accent);
+    font-weight: 700;
+}
+
+#form-status:not(:empty) {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 3px solid var(--text);
+    border-left: 12px solid var(--accent);
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+
 
 @media (prefers-color-scheme: dark) {
     :root {
