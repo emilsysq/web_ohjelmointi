@@ -26,5 +26,25 @@
     - A: Linkit eivät näy oikein, "värit" osio taulukkona, eikä listana. Sekä muita pieniä kirjoitusvirheitä
     - Muutin: Korjasin linkit ja tein värit osion taulukoksi, sekä korjasin kirjoitusvirheet.
 
+# E3
+- Q: Tiivistä E3 tehtävän vaatimukset luentomateriaaleista (Luento 5 ja 6, js-base-zipit).
+    - A: Yksi JS-tiedosto defer-attribuutilla, ei kirjastoja eikä onclick-attribuutteja, suodatin ja tilarivi, lomake jossa virheiden tarkistus, aria-describedby ja role="status" -viesti, luonnos localStorageen, yksi popover ja kaiken pitää toimia näppäimistöllä.
+    - Muutin: Käytin tätä omana tarkistuslistanani.
+
+- Q: Miten tuotelista rakennetaan, että sesonkisuodatin onnistuu?
+    - A: Tuotteille data-attribuutti, painikkeille aria-pressed ja tilarivi role="status". AI kysyi, kumpi arvo toimii paremmin: data-season="now" vai data-in-season="true/false".
+    - Muutin: Kirjoitin tuotelistan itse ja valitsin yksinkertaisemman data-in-season="true/false", koska se riittää nyt eikä vaadi päivämäärälogiikkaa.
+
+- Q: Kopioin painikkeet ja tilarivin jokaisen tuotteen sisään.
+    - A: AI huomautti, että id saa olla sivulla vain kerran. Painikkeet ja tilarivi kuuluvat listan yläpuolelle. Lisäksi li-tageja ei oltu suljettu ja data-attribuutit olivat vanhassa muodossa.
+    - Muutin: Siirsin painikkeet ja tilarivin listan ulkopuolelle ja korjasin li-tagit ja otsikkojärjestyksen h1 -> h2 -> h3
+
+- Q: Konsolissa tuli virhe "Cannot read properties of null" contact-sivulla.
+    - A: Koska suodatin ja lomake olivat samassa script.js:ssä, suodattimen koodi yritti hakea painikkeita, joita contact.html:ssä ei ole, ja koodi kaatui. Korjaus: kääri molemmat funktioihin (initFilter ja initForm), jotka lopettavat heti, jos elementtiä ei löydy.
+    - Muutin: Minulta puuttui tarvittavat osat script.js jotka lisäsin sinne
+
+- Q: auta popoverissa aukioloajoille.
+    - A: AI antoi popover-koodin (popovertarget, popover ja ::backdrop). Aukioloajat on keksitty, koska oikeita aikoja ei ole, mutta kesä ja talvi ovat eri kuten Aili toivoi.
+    - Muutin: Lisäsin popoverin contact.html:ään ja testasin avaamisen, Esc-näppäimen ja kohdistuksen palautumisen.
 
 
