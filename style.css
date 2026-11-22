@@ -151,6 +151,20 @@ textarea:focus-visible {
 }
 
 
+[popover] {
+    max-width: 28rem;
+    padding: 1.5rem;
+    background: var(--bg);
+    color: var(--text);
+    border: 3px solid var(--text);
+    border-left: 12px solid var(--accent);
+    border-radius: 0.75rem;
+}
+
+[popover]::backdrop {
+    background: rgb(0 0 0 / 0.6);
+}
+
 
 @media (prefers-color-scheme: dark) {
     :root {
