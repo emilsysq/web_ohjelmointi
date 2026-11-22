@@ -1,3 +1,4 @@
+// ---------- Tuotteet-sivu: sesonkisuodatin ----------
 function initFilter() {
     const list = document.getElementById('product-list');
     if (!list) return;
@@ -33,7 +34,7 @@ function initFilter() {
     showFilter(false);
 }
 
-
+// ---------- Yhteystiedot-sivu: lomake ----------
 function initForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
@@ -41,10 +42,33 @@ function initForm() {
     const statusBox = document.getElementById('form-status');
     const fields = form.querySelectorAll('input, textarea');
 
-
+    // Selain ei näytä omia virheitään, JS hoitaa ne
     form.noValidate = true;
 
+    // Luonnoksen tallennus selaimen muistiin
+    const DRAFT_KEY = 'makelan-tilapuoti-contact-draft';
 
+    function saveDraft() {
+        const data = Object.fromEntries(new FormData(form));
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+    }
+
+    function loadDraft() {
+        const saved = localStorage.getItem(DRAFT_KEY);
+        if (!saved) return;
+        try {
+            const data = JSON.parse(saved);
+            fields.forEach(function (field) {
+                if (data[field.name]) {
+                    field.value = data[field.name];
+                }
+            });
+        } catch (error) {
+            localStorage.removeItem(DRAFT_KEY);
+        }
+    }
+
+    // Virheilmoitukset kentän id:n ja validity-avaimen mukaan
     const messages = {
         name: {
             valueMissing: 'Kirjoita nimesi.'
@@ -61,6 +85,12 @@ function initForm() {
 
     function messageFor(field) {
         const rules = messages[field.id];
+
+        // Palautettu luonnos ei laukaise selaimen tooShort-tarkistusta, joten tarkistetaan itse
+        if (field.minLength > 0 && field.value !== '' && field.value.length < field.minLength) {
+            return rules.tooShort;
+        }
+
         for (const key in rules) {
             if (field.validity[key]) {
                 return rules[key];
@@ -69,7 +99,7 @@ function initForm() {
         return '';
     }
 
-
+    // Näyttää tai piilottaa kentän virheen. Palauttaa true, jos kenttä on kunnossa.
     function showError(field) {
         const message = messageFor(field);
         const errorBox = document.getElementById(field.id + '-error');
@@ -87,7 +117,6 @@ function initForm() {
 
         let firstInvalid = null;
 
-        
         fields.forEach(function (field) {
             const ok = showError(field);
             if (!ok && !firstInvalid) {
@@ -103,16 +132,21 @@ function initForm() {
         const data = Object.fromEntries(new FormData(form));
         statusBox.textContent = 'Viestisi on valmis, ' + data.name +
             '. Tämä lomake ei vielä lähetä viestiä eteenpäin.';
+        localStorage.removeItem(DRAFT_KEY);
         form.reset();
     });
 
-    // Kun käyttäjä korjaa kenttää, virhe päivittyy heti
+    // Kun käyttäjä kirjoittaa, luonnos tallentuu ja avoin virhe päivittyy
     form.addEventListener('input', function (event) {
+        saveDraft();
+
         const errorBox = document.getElementById(event.target.id + '-error');
         if (errorBox && !errorBox.hidden) {
             showError(event.target);
         }
     });
+
+    loadDraft();
 }
 
 initFilter();
