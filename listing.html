@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="fi">
+    
 
 <head>
     <meta charset="UTF-8">
     <title>Tuotteet - Mäkelän Tilapuoti</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
 </head>
+
 
 <body>
     <header>
@@ -14,6 +17,8 @@
             alt="Pyöreä merkki, jossa vaalea aitta nousevan korallinpunaisen auringon edessä ja peltovaot, sekä teksti Mäkelän Tilapuoti, Ilmajoki."
             width="500" height="174">
     </header>
+
+
     <nav>
         <ul>
             <li><a href="index.html">Etusivu</a></li>
@@ -22,13 +27,46 @@
             <li><a href="about.html">Meistä</a></li>
         </ul>
     </nav>
+
+
     <main>
         <h1>Tuotteet</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rem consequuntur modi maiores, magni eos! Eius
-            beatae distinctio aperiam quas temporibus cupiditate sequi, reiciendis dolor numquam tempore nihil
-            doloremque assumenda?.</p>
+        <p>Myymme omia perunoita, vihanneksia, kananmunia ja marjoja sekä muutamia naapuritilojen tuotteita. Hyllyn sisältö vaihtelee vuodenajan mukaan.</p>
+
         <h2>Sesongissa olevat tuotteet</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ab et rerum a soluta hic. Laborum eaque eos ipsa ratione quae dolorem reprehenderit tenetur voluptas cumque inventore, non, illum culpa.</p>
+
+        <div>
+            <button type="button" id="filter-all" aria-pressed="true">Kaikki tuotteet</button>
+            <button type="button" id="filter-season" aria-pressed="false">Sesongissa nyt</button>
+        </div>
+        <p id="status" role="status"></p>
+
+        <ul id="product-list">
+            <li data-in-season="true">
+                <h3>Kotimaiset perunat</h3>
+                <p>Omat tuoreet perunat</p>
+            </li>
+
+            <li data-in-season="true">
+                <h3>Porkkanat</h3>
+                <p>Tuoreita porkkanoita omalta tilalta</p>
+            </li>
+
+            <li data-in-season="true">
+                <h3>Nauris</h3>
+                <p>Oman tilan nauris</p>
+            </li>
+
+            <li data-in-season="true">
+                <h3>Kananmunat</h3>
+                <p>Munia omasta kanalasta</p>
+            </li>
+
+            <li data-in-season="false">
+                <h3>Mansikat</h3>
+                <p>Mansikat omalta tilalta</p>
+            </li>
+        </ul>
 
     </main>
     <footer>
